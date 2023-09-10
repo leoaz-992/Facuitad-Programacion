@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ejercicios</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1>Ejercicios programacion dispositivos móviles</h1>
+    </header>
+    <div class="container">
+      <div class="fila">
+        <section class="ejercicio1">
+          <h2>MAYOR DE DOS NÚMEROS</h2>
+          <p>
+            Escribe un programa que tome dos números como entrada y muestre en
+            pantalla cuál de los dos números es mayor.
+          </p>
+          <form class="box" id="ejercicio1" method="post">
+            <label class="label" for="dato1">1er número</label>
+            <input
+              type="number"
+              name="dato1"
+              id="dato1"
+              placeholder="ingrese un numero"
+            />
+            <label class="label" for="dato2">2do número</label>
+            <input
+              type="number"
+              name="dato2"
+              id="dato2"
+              placeholder="ingrese un numero"
+            />
+            <button class="button" type="submit">Calcular número mayor</button>
+          </form>
+          <span class="Resultado" id="ResultadoEjercicio1"></span>
+        </section>
+
+        <section class="ejercicio2">
+          <h2>CATEGORÍA DE EDAD</h2>
+          <p>
+            Un programa que tome la edad de una persona como entrada y muestre en pantalla en qué categoría de edad se encuentra: niño,adolescente, adulto o adulto mayor.
+          </p>
+          <form class="box" id="ejercicio2" method="post">
+            <label class="label" for="edad">edad</label>
+            <input
+              type="number"
+              name="edad"
+              min="1"
+              id="edad"
+              placeholder="ingrese su edad"
+            />
+            <button class="button" ype=" tsubmit">Calcular Categoria</button>
+          </form>
+          <span class="Resultado" id="ResultadoEjercicio2"></span>
+        </section>
+      </div>
+      <div class="fila">
+        <section class="ejercicio3">
+          <h2>CALCULADORA SIMPLE</h2>
+          <p>
+            Un programa que tome dos números y una operación matemática (+, -, *, /) como entrada, y muestre el resultado de la operación.
+          </p>
+          <form id="ejercicio3">
+            <div class="inputs">
+              <div>
+                <input
+                  type="number"
+                  name="numOperation1"
+                  id="numOperation1"
+                  placeholder="Ingrese un número"
+                />
+                <input
+                  type="number"
+                  name="numOperation2"
+                  id="numOperation2"
+                  placeholder="Ingrese un número"
+                />
+              </div>
+              <select class="simbol" name="oper" id="oper">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+              </select>
+            </div>
+            <button type="submit" id="boton">Calcular</button>
+          </form>
+          <span id="ResultadoEjercicio3"></span>
+        </section>
+        <section class="ejercicio4">
+          <h2>TABLA DE MULTIPLICAR</h2>
+          <p>
+            Un programa que tome un número como
+            entrada e imprima la tabla de multiplicar de ese número del 1 al 10.
+          </p>
+          <form id="ejercicio4">
+            <label for="datotabla">selecciona un número</label>
+            <div class="ejtabla">
+              <input
+                class="inputtabla"
+                type="number"
+                name="datotabla"
+                id="datotabla"
+                value="1"
+              />
+              <button class="buttontabla" type="submit">mostrar tabla</button>
+            </div>
+          </form>
+          <!-- aca se va mostrar la tabla del número -->
+          <div id="tablaMultiplicar"></div>
+        </section>
+      </div>
+      <div class="fila">
+        <section class="ejercicio5">
+          <h2>SUMA DE DÍGITOS PARES</h2>
+          <p>
+            Un programa que tome un número como entrada y calcule la suma de sus dígitos pares. Luego, muestra en pantalla el número ingresado y la suma resultante.
+          </p>
+          <form id="ejercicio5">
+            <div class="ejtabla">
+              <input
+                class="inputtabla"
+                type="number"
+                name="datosuma"
+                id="datosuma"
+                placeholder="ingrese un número"
+              />
+              <button class="buttontabla" type="submit">sumar dígitos</button>
+            </div>
+          </form>
+          <span class="Resultado" id="resultadoSumaD"></span>
+        </section>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding:0;
+    background-color: rgba(127, 206, 255, 0.3);
+}
+.header{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 12px;
+    background-color: rgba(76, 19, 247, 0.5);
+    margin: 0;
+}
+.container{
+    padding: 20px 12px;
+    margin-bottom: 60px;
+}
+.fila{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted #02296c;
+}
+.ejercicio1, .ejercicio2 ,.ejercicio3, .ejercicio4, ejercicio5{
+    padding: 12px;
+    width: 40%;
+    
+}
+input{
+   width: 93%;
+   margin: 10px 0px;
+   padding: 8px;
+}
+button{
+    
+    width: 97%;
+    margin: 10px 0;
+    padding: 8px;
+}
+label{
+    display: block;
+    padding: 0%;
+    margin: 0;
+}
+p{
+    font-family: sans-serif;
+}
+.box{
+    margin-bottom: 10px;
+}
+.tablaMultiplicar{
+    display: none;
+}
+/*stylos ejercicio4*/
+.ejtabla{
+    display: flex;
+    justify-content: space-between;
+}
+.inputtabla{
+    
+    width: 60%;
+}
+.buttontabla{
+    width: 40%;
+    margin-left: 8px;
+}
+.simbol{
+    margin-left: 5px;
+    padding: 10px;
+    font-size: 26px;
+}
+.inputs{
+    display: flex;
+    justify-content:center;
+}
