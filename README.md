@@ -19,6 +19,12 @@ Escribe un programa que tome un número como entrada e imprima la tabla de multi
 _SUMA DE DÍGITOS PARES_  
 Escribe un programa que tome un número como entrada y calcule la suma de sus dígitos pares.Luego, muestra en pantalla el número ingresado y la suma resultante.
 
+---
+
+[puede ver el la primer actividad haciendo click aqui](https://leoaz-992.github.io/Facuitad-Programacion/) :+1:
+
+---
+
 ## actividad 2
 
 Realice un programa que solicite los siguientes datos del alumno:
