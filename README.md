@@ -21,7 +21,7 @@ Escribe un programa que tome un n√∫mero como entrada y calcule la suma de sus d√
 
 ---
 
-<a href="https://leoaz-992.github.io/Facuitad-Programacion/" target="_blank">puede ver el la primer actividad haciendo click aqui</a>:+1:
+<a href="https://leoaz-992.github.io/Facuitad-Programacion/" target="_blank">puede ver la primer actividad haciendo click aqui</a>:+1:
 
 ---
 
