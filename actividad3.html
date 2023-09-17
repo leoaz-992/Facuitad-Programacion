@@ -24,61 +24,60 @@
         <div class="card-body bg-body-secondary">
           <div class="mt-2">
             <div class="col-md-4 mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
+              <label for="cuilNumber" class="form-label"
                 >CUIL</label
               >
               <input
-                type="email"
+                type="text"
                 class="form-control"
-                id="exampleFormControlInput1"
+                id="cuilNumber"
                 placeholder="ingrese su CUIL"
               />
             </div>
             <div class="row g-3 justify-content-around">
               <div class="col-md-6 mb-3">
-                <label for="exampleFormControlInput1" class="form-label"
+                <label for="firstName" class="form-label"
                   >Nombre</label
                 >
                 <input
-                  type="email"
+                  type="text"
                   class="form-control"
-                  id="exampleFormControlInput1"
+                  id="firstName"
                   placeholder="ingrese su nombre"
                 />
               </div>
               <div class="col-md-6 mb-3">
-                <label for="exampleFormControlInput1" class="form-label"
+                <label for="lastName" class="form-label"
                   >Apellido</label
                 >
                 <input
-                  type="email"
+                  type="text"
                   class="form-control"
-                  id="exampleFormControlInput1"
+                  id="lastName"
                   placeholder="ingrese su Apellido"
                 />
               </div>
             </div>
             <div class="row g-3 justify-content-around">
               <div class="col-md-6 mb-3">
-                <label for="exampleFormControlInput1" class="form-label"
+                <label for="nacionality" class="form-label"
                   >Nacionalidad</label
                 >
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="ingrese su nombre"
+                  id="nacionality"
+                  placeholder="ingrese su Nacionalidad"
                 />
               </div>
               <div class="col-md-6 mb-3">
-                <label for="exampleFormControlInput1" class="form-label"
+                <label for="birthDate" class="form-label"
                   >fecha de nacimiento</label
                 >
                 <input
                   type="date"
                   class="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="ingrese su Apellido"
+                  id="birthDate"
                 />
               </div>
             </div>
@@ -117,20 +116,20 @@
                     class="form-check-input"
                     type="checkbox"
                     value=""
-                    id="flexCheckDefault"
+                    id="fsacheck"
                   />
-                  <label class="form-check-label" for="flexCheckDefault">
+                  <label class="form-check-label" for="fsacheck">
                     Es formoseño.
                   </label>
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <div class="form-group d-none">
-                  <select class="form-control" id="provincia">
+                <div class="form-group d-none" id="listLocalities">
+                  <select class="form-control" id="localities">
                     <option value="">Seleccione una ciudad</option>
-                    <option value="Buenos Aires">Formosa</option>
-                    <option value="Córdoba">las lomitas</option>
-                    <option value="Santa Fe">El colorado</option>
+                    <option value="Formosa">Formosa</option>
+                    <option value="Las Lomitas">Las Lomitas</option>
+                    <option value="El Colorado">El colorado</option>
                   </select>
                 </div>
               </div>
@@ -142,35 +141,35 @@
                     class="form-check-input"
                     type="checkbox"
                     value=""
-                    id="flexCheckDefault"
+                    id="workCheck"
                   />
-                  <label class="form-check-label" for="flexCheckDefault">
+                  <label class="form-check-label" for="workCheck">
                     trabaja actualmente
                   </label>
                 </div>
               </div>
               <div class="col-md-6 mb-3"></div>
             </div>
-            <div class="row g-3 justify-content-around d-none">
+            <div class="row g-3 justify-content-around d-none" id="workInfo">
               <div class="col-md-6 mb-3">
-                <label for="exampleFormControlInput1" class="form-label"
-                  >Nombre de donde trabaja</label
+                <label for="workName" class="form-label"
+                  >Nombre del lugar de donde trabaja</label
                 >
                 <input
-                  type="email"
+                  type="text"
                   class="form-control"
-                  id="exampleFormControlInput1"
+                  id="workName"
                   placeholder="ingrese un nombre"
                 />
               </div>
               <div class="col-md-6 mb-3">
-                <label for="exampleFormControlInput1" class="form-label"
+                <label for="directionWork" class="form-label"
                   >Domicilio donde trabaja</label
                 >
                 <input
                   type="email"
                   class="form-control"
-                  id="exampleFormControlInput1"
+                  id="directionWork"
                   placeholder="ingrese una Dirección"
                 />
               </div>
@@ -179,13 +178,62 @@
         </div>
         <div class="card-footer bg-info-subtle">
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button class="btn btn-outline-primary me-md-2" type="button">
+            <button class="btn btn-outline-primary me-md-2" type="button" onclick="informe()">
               Enviar datos
             </button>
           </div>
         </div>
       </div>
     </div>
-    <script></script>
+    <script>
+      const fsacheck= document.getElementById('fsacheck');
+      const listLocalities = document.getElementById('listLocalities');
+      const workCheck = document.getElementById('workCheck');
+      const workInfo = document.getElementById('workInfo');
+      //const sendForm = document.getElementById('sendForm');
+
+      fsacheck.addEventListener('change',(e)=>{
+        //add o remove class d-none 
+        if (e.target.checked) {
+          listLocalities.classList.remove('d-none');
+        }else{
+          listLocalities.classList.add('d-none');
+        }
+      })
+
+      workCheck.addEventListener('change',(e)=>{
+        if (e.target.checked) {
+          workInfo.classList.remove('d-none');
+        } else {
+          workInfo.classList.add('d-none');
+        }
+      })
+
+      function informe(){
+        //  añadir un validador q escuche la nacionalidad y si es diferente de argentino deshabilite el check de 'es formseño'
+        const data = {
+          cuil:document.getElementById('cuilNumber').value,
+          nombre:document.getElementById('firstName').value,
+          apellido:document.getElementById('lastName').value,
+          nacionalidad:document.getElementById('nacionality').value,
+          fechaNacimiento:document.getElementById('birthDate').value
+        }
+        if (listLocalities.classList.contains('d-none')) {
+          data.formosenio=false;
+        } else {
+          data.formosenio = true;
+          data.lugarNacimiento=document.getElementById('localities').value;
+        }
+        
+        
+        
+        console.log(data);
+      }
+
+      //sendForm.addEventListener('click',informe());
+
+
+
+    </script>
   </body>
 </html>
